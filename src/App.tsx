@@ -1,11 +1,11 @@
 import "./App.css";
-import Atividade1 from "./pages";
+import DisciplineTable from "./pages/disciplineTable";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Atividade1 />
+        <DisciplineTable />
       </header>
     </div>
   );

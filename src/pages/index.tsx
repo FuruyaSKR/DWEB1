@@ -1,7 +1,6 @@
 import { Button, IconButton, TextField, Typography } from "@mui/material";
 import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { IndexKind } from "typescript";
 
 const Atividade1: React.FC = () => {
   const [name, setName] = useState<string>("");
@@ -108,7 +107,6 @@ const Atividade1: React.FC = () => {
           flexDirection: "column",
           gap: 10,
           marginTop: 20,
-          width: 400,
         }}
       >
         {tableData.map((el, index) => {
@@ -131,8 +129,6 @@ const Atividade1: React.FC = () => {
                 <Typography>{el?.course}</Typography>
                 <IconButton
                   onClick={() => {
-                    // const deleteItem = delete tableData[index];
-                    // console.log(`🚀 ~ Teste ~ deleteItem:`, deleteItem);
                     setTableData(tableData.splice(index + 1));
                   }}
                 >
@@ -141,6 +137,7 @@ const Atividade1: React.FC = () => {
               </div>
             );
           }
+          return null;
         })}
       </div>
     </>
