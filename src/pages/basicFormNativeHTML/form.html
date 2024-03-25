@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body style="display: flex; flex-direction: column; align-items: center;">
+    <form action="" method="post">
+        <div
+            style="display: flex; justify-content: center; align-items: center;flex-direction: column; width: 300px; gap: 20px;">
+            <fieldset
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                <h1>Dados Pessoal</h1>
+                <label for="txt_nome">Nome:</label>
+                <input type="text" name="txt_nome" id="nome" placeholder="Digite seu nome completo">
+                <br />
+
+                <label for="txt_idade">Idade:</label>
+                <input type="number" name="txt_idade" id="idade" placeholder="Digite sua idade">
+                <br />
+
+                <label for="txt_naturalizada">Naturalidade:</label>
+                <input type="text" name="txt_naturalizada" id="naturalizada" placeholder="Cidade natal">
+                <br />
+
+                <label for="txt_data_nas">Data de Nascimento:</label>
+                <input type="date" name="txt_naturalizada" id="naturalizada" style="width: 177px;">
+                <br />
+
+                <label for="txt_nome_social">Nome Social:</label>
+                <input type="text" name="txt_nome_social" id="nome_social" placeholder="Seu nome social, se aplicável">
+                <br />
+
+                <label for="txt_genero">Gênero:</label>
+                <select name="txt_genero" id="genero" style="width: 177px;">
+                    <option value="" disabled selected>Selecione seu gênero</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Indefinido">Indefinido</option>
+                </select>
+                <br />
+
+                <label for="txt_escolaridade">Escolaridade:</label>
+                <input type="text" name="txt_escolaridade" id="escolaridade" placeholder="Sua maior escolaridade">
+                <br />
+
+                <label for="txt_filhos">Tem Filhos?</label>
+                <select name="txt_filhos" id="filhos" style="width: 177px;">
+                    <option value="" disabled selected>Selecione o número de filhos</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4+</option>
+                </select>
+                <br />
+            </fieldset>
+
+            <!-- Documentos -->
+            <fieldset
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                <h1>Documentos</h1>
+                <label for="txt_rg">RG:</label>
+                <input type="text" name="txt_rg" id="rg" placeholder="Número do RG">
+                <br />
+
+                <label for="txt_orgao">Órgão Emissor:</label>
+                <input type="text" name="txt_orgao" id="orgao" placeholder="Órgão emissor do RG">
+                <br />
+
+                <label for="txt_uf">UF:</label>
+                <input type="text" name="txt_uf" id="uf" placeholder="Estado emissor do RG">
+                <br />
+
+                <label for="txt_cpf">CPF:</label>
+                <input type="text" name="txt_cpf" id="cpf" placeholder="Número do CPF">
+                <br />
+
+                <label for="txt_passport">Passaporte:</label>
+                <input type="text" name="txt_passport" id="passport" placeholder="Número do passaporte">
+                <br />
+
+                <label for="txt_pis">PIS:</label>
+                <input type="text" name="txt_pis" id="pis" placeholder="Número do PIS">
+                <br />
+                <label for="txt_eleitor">Título de Eleitor:</label>
+                <input type="text" name="txt_eleitor" id="eleitor" placeholder="Número do título de eleitor">
+                <br />
+
+                <label for="txt_reservista">Certificado de Reservista:</label>
+                <input type="text" name="txt_reservista" id="reservista"
+                    placeholder="Número do certificado de reservista">
+                <br />
+            </fieldset>
+
+            <!-- Endereço Pessoal -->
+            <fieldset
+                style="display: flex;flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                <h1>Endereço Pessoal</h1>
+                <label for="txt_logradouro">Logradouro:</label>
+                <input type="text" name="txt_logradouro" id="logradouro" placeholder="Rua, Avenida, etc.">
+                <br />
+
+                <label for="txt_numero">Número:</label>
+                <input type="text" name="txt_numero" id="numero" placeholder="Número da residência">
+                <br />
+
+                <label for="txt_bairro">Bairro:</label>
+                <input type="text" name="txt_bairro" id="bairro" placeholder="Bairro">
+                <br />
+
+                <label for="txt_cidade">Cidade:</label>
+                <input type="text" name="txt_cidade" id="cidade" placeholder="Cidade">
+                <br />
+
+                <label for="txt_estado">Estado:</label>
+                <input type="text" name="txt_estado" id="estado" placeholder="Estado">
+                <br />
+            </fieldset>
+
+            <!-- Endereço Comercial -->
+            <fieldset
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                <h1>Endereço Comercial</h1>
+                <label for="txt_logradouro_comercial">Logradouro:</label>
+                <input type="text" name="txt_logradouro_comercial" id="logradouro_comercial"
+                    placeholder="Rua, Avenida, etc. do trabalho">
+                <br />
+
+                <label for="txt_numero_comercial">Número:</label>
+                <input type="text" name="txt_numero_comercial" id="numero_comercial"
+                    placeholder="Número do local de trabalho">
+                <br />
+
+                <label for="txt_bairro_comercial">Bairro:</label>
+                <input type="text" name="txt_bairro_comercial" id="bairro_comercial"
+                    placeholder="Bairro do local de trabalho">
+                <br />
+
+                <label for="txt_cidade_comercial">Cidade:</label>
+                <input type="text" name="txt_cidade_comercial" id="cidade_comercial"
+                    placeholder="Cidade do local de trabalho">
+                <br />
+
+                <label for="txt_estado_comercial">Estado:</label>
+                <input type="text" name="txt_estado_comercial" id="estado_comercial"
+                    placeholder="Estado do local de trabalho">
+                <br />
+            </fieldset>
+
+            <!-- Informação Complementar -->
+            <fieldset
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%;">
+                <label for="txa_infoComplementar">Informação Complementar:</label>
+                <textarea name="txa_infocomplementar" id="txa_infocomplementar" cols="30" rows="10"
+                    placeholder="Qualquer informação adicional que deseje fornecer"></textarea>
+                <br />
+            </fieldset>
+
+            <div style="display: flex; flex-direction: row; gap: 10px;">
+                <input type="submit" value="Salvar">
+                <input type="reset" value="Limpar">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
