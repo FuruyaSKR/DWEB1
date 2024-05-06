@@ -1,20 +1,20 @@
-import { Button, IconButton, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
+import { Button, IconButton, TextField, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Atividade1: React.FC = () => {
-  const [name, setName] = useState<string>("");
+  const [name, setName] = useState<string>('');
   const [age, setAge] = useState<string | number>(0);
   const [iaa, setIaa] = useState<string | number>(0);
-  const [course, setCourse] = useState<string>("");
+  const [course, setCourse] = useState<string>('');
   const [tableData, setTableData] = useState<any[]>([]);
   console.log(`🚀 ~ Teste ~ tableData:`, tableData);
 
   const handleClearValues = () => {
-    setName("");
-    setAge("");
-    setIaa("");
-    setCourse("");
+    setName('');
+    setAge('');
+    setIaa('');
+    setCourse('');
   };
 
   const handleSaveData = () => {
@@ -24,18 +24,18 @@ const Atividade1: React.FC = () => {
       iaa: iaa,
       course: course,
     };
-    setTableData((dataINtable) => [...dataINtable, payload]);
+    setTableData(dataINtable => [...dataINtable, payload]);
     handleClearValues();
   };
 
   const renderForm = () => (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
+        display: 'flex',
+        flexDirection: 'column',
         gap: 15,
-        backgroundColor: "#d7d7d7",
-        padding: "20px 30px",
+        backgroundColor: '#d7d7d7',
+        padding: '20px 30px',
         borderRadius: 4,
       }}
     >
@@ -83,9 +83,9 @@ const Atividade1: React.FC = () => {
       </div>
       <div
         style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-between',
         }}
       >
         <Button variant="text" type="submit" onClick={handleClearValues}>
@@ -103,8 +103,8 @@ const Atividade1: React.FC = () => {
       {renderForm()}
       <div
         style={{
-          display: "flex",
-          flexDirection: "column",
+          display: 'flex',
+          flexDirection: 'column',
           gap: 10,
           marginTop: 20,
         }}
@@ -113,11 +113,12 @@ const Atividade1: React.FC = () => {
           if (el !== undefined) {
             return (
               <div
+                key={index}
                 style={{
-                  backgroundColor: "rgb(119, 119, 119)",
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  backgroundColor: 'rgb(119, 119, 119)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
                   borderRadius: 4,
                   gap: 20,
                   padding: 6,
