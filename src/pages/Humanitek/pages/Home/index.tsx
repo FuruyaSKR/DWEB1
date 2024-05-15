@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { Dialog } from '@mui/material';
 import {
   CardHome,
@@ -21,6 +22,8 @@ import {
   Mail,
   Twitter,
 } from '@mui/icons-material/';
+import ShowAllUsers from '../ShowAllUsers';
+import ContactUs from '../ContactUs';
 
 interface Props {
   open: boolean;
@@ -28,6 +31,11 @@ interface Props {
 }
 
 const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
+  const [openShowAllUsers, setOpenShowAllUsers] = useState<boolean>(false);
+  const [openContactUs, setOpenContactUs] = useState<boolean>(false);
+  const [openRegisterNewUser, setOpenRegisterNewUser] =
+    useState<boolean>(false);
+
   return (
     <Dialog
       open={open}
@@ -35,6 +43,7 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
       sx={{
         '& .MuiDialog-paper': {
           backgroundColor: '#eaeaea',
+          overflowY: 'hidden',
         },
       }}
     >
@@ -46,9 +55,7 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
         <HomeContent>
           <p>Inicio</p>
           <div>
-            <CardHome
-              onClick={() => console.log(`🚀 ~ Teste ~ CardHome:`, CardHome)}
-            >
+            <CardHome onClick={() => setOpenRegisterNewUser(true)}>
               <img src={signinPersonImage} alt="Cadastrar Pessoa" />
               <div>
                 <h1>Cadastro de pessoas</h1>
@@ -60,9 +67,7 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
               </div>
             </CardHome>
 
-            <CardHome
-              onClick={() => console.log(`🚀 ~ Teste ~ CardHome:`, CardHome)}
-            >
+            <CardHome onClick={() => setOpenShowAllUsers(true)}>
               <img src={listPersonImage} alt="Listar Pessoas" />
               <div>
                 <h1>Listar pessoas</h1>
@@ -86,7 +91,7 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
               necessário.
             </p>
             <div>
-              <button>SOBRE NÓS</button>
+              <button onClick={() => setOpenContactUs(true)}>SOBRE NÓS</button>
             </div>
           </LeftFooter>
           <Divider />
@@ -94,30 +99,38 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
             <div>
               <SocialMediaLine>
                 <Instagram sx={{ color: '#454545' }} fontSize="medium" />
-                <h1>Instagram: @Humanitek</h1>
+                <h1>Instagram:</h1>
+                <p>@Humanitek</p>
               </SocialMediaLine>
               <SocialMediaLine>
                 <Twitter sx={{ color: '#454545' }} fontSize="medium" />
-                <h1>X (Twitter): @HumanitekApp</h1>
+                <h1>X (Twitter): </h1>
+                <p>@HumanitekApp</p>
               </SocialMediaLine>
               <SocialMediaLine>
                 <FacebookOutlined sx={{ color: '#454545' }} fontSize="medium" />
-                <h1>Facebook: /Humanitek</h1>
+                <h1>Facebook: </h1>
+                <p>/Humanitek</p>
               </SocialMediaLine>
             </div>
             <div>
               <SocialMediaLine>
                 <Call sx={{ color: '#454545' }} fontSize="medium" />
-                <h1>Número de telefone: +55 21 4002-8922</h1>
+                <h1>Número de telefone: </h1>
+                <p>+55 21 4002-8922</p>
               </SocialMediaLine>
               <SocialMediaLine>
                 <Mail sx={{ color: '#454545' }} fontSize="medium" />
-                <h1>Email: contato@humanitek.com.br</h1>
+                <h1>Email: </h1>
+                <p>contato@humanitek.com.br</p>
               </SocialMediaLine>
             </div>
           </RightFooter>
         </div>
       </HomeFooter>
+      <ShowAllUsers open={openShowAllUsers} setOpen={setOpenShowAllUsers} />
+      <ContactUs open={openContactUs} setOpen={setOpenContactUs} />
+      <ContactUs open={openRegisterNewUser} setOpen={setOpenRegisterNewUser} />
     </Dialog>
   );
 };

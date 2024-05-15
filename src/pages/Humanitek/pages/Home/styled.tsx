@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 export const HomePage = styled.div`
   display: flex;
@@ -12,7 +12,8 @@ export const HomeFooter = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 300px;
+  height: 100%;
+  max-height: 300px;
   justify-content: center;
   align-items: center;
   gap: 32px;
@@ -29,6 +30,7 @@ export const HomeFooter = styled.div`
 export const LeftFooter = styled.div`
   display: flex;
   height: 100%;
+  max-height: 300px;
   padding: 20px 44px;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +52,6 @@ export const LeftFooter = styled.div`
     font-family: Roboto;
     font-size: 17px;
     font-style: normal;
-    font-weight: 700;
     line-height: 16px; /* 94.118% */
   }
   > div {
@@ -82,8 +83,9 @@ export const LeftFooter = styled.div`
 export const RightFooter = styled.div`
   display: flex;
   height: 100%;
+  max-height: 300px;
   width: 100%;
-  padding: 18px 44px;
+  padding: 20px 44px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -94,6 +96,7 @@ export const RightFooter = styled.div`
     justify-content: center;
     align-items: start;
     width: auto;
+    gap: 10px;
   }
 `;
 
@@ -119,6 +122,17 @@ export const SocialMediaLine = styled.div`
     font-style: normal;
     font-weight: 700;
     line-height: 16px; /* 88.889% */
+    margin: 0px;
+  }
+  > p {
+    color: var(--Text-color-Light-Mode-Primary, rgba(0, 0, 0, 0.87));
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    text-align: justify;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.1px;
+    margin: 0px;
   }
 `;
 
@@ -167,8 +181,8 @@ export const HomeContent = styled.div`
     font-family: Roboto;
     font-size: 45px;
     font-style: normal;
-    font-weight: 700;
     line-height: 16px;
+    font-weight: 700;
   }
   > div {
     display: flex;
@@ -203,12 +217,13 @@ export const CardHome = styled.div`
     > p {
       color: var(--Text-color-Light-Mode-Primary, rgba(0, 0, 0, 0.87));
       font-family: Roboto;
-      font-size: 14px;
+      font-size: 16px;
       font-style: normal;
       text-align: justify;
-      font-weight: 700;
       line-height: 24px; /* 171.429% */
       letter-spacing: 0.1px;
+      margin: 0px;
+      text-indent: 1.5em;
     }
     > h1 {
       font-family: Roboto;
@@ -217,6 +232,7 @@ export const CardHome = styled.div`
       font-weight: 700;
       line-height: 24px; /* 100% */
       letter-spacing: 0.1px;
+      text-align: center;
     }
   }
 `;
