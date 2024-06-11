@@ -24,6 +24,7 @@ import {
 } from '@mui/icons-material/';
 import ShowAllUsers from '../ShowAllUsers';
 import ContactUs from '../ContactUs';
+import RegisterNewUser from '../RegisterNewUser';
 
 interface Props {
   open: boolean;
@@ -43,7 +44,7 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
       sx={{
         '& .MuiDialog-paper': {
           backgroundColor: '#eaeaea',
-          overflowY: 'hidden',
+          overflowY: 'scroll',
         },
       }}
     >
@@ -130,7 +131,10 @@ const Home: React.FC<Props> = ({ open, setOpen }: Props) => {
       </HomeFooter>
       <ShowAllUsers open={openShowAllUsers} setOpen={setOpenShowAllUsers} />
       <ContactUs open={openContactUs} setOpen={setOpenContactUs} />
-      <ContactUs open={openRegisterNewUser} setOpen={setOpenRegisterNewUser} />
+      <RegisterNewUser
+        open={openRegisterNewUser}
+        setOpen={setOpenRegisterNewUser}
+      />
     </Dialog>
   );
 };

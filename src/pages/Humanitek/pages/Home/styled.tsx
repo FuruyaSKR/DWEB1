@@ -168,6 +168,7 @@ export const UserIcon = styled.img`
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 export const HomeContent = styled.div`
